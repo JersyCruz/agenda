@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Tarea</title>
+    <!-- Incluimos Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                Registro de Tarea
+            </div>
+            <div class="card-body">
+                <form action="procesar.php" method="POST">
+                    <div class="form-group">
+                        <label for="tarea">Tarea:</label>
+                        <input type="text" class="form-control" id="tarea" name="tarea" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_inicio">Fecha de Inicio:</label>
+                        <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_termino">Fecha de Término:</label>
+                        <input type="date" class="form-control" id="fecha_termino" name="fecha_termino" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <select class="form-control" id="estado" name="estado" required>
+                            <option value="">Seleccionar estado...</option>
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="En proceso">En proceso</option>
+                            <option value="Terminado">Terminado</option>
+                        </select>
+                    </div>
+                  
+                    <div class="card">
+                        <div class="card-body">
+                        <button type="submit" class="btn btn-primary">Guardar Tarea</button>
+                        </form>
+               
+                        <a href="vista.php"  class="btn btn-info">Vista Tareas</a>
+                        </div>
+                    </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluimos Bootstrap JS y dependencias si es necesario -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
